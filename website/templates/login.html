@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Wineata - {{_('Login')}}{% endblock %}
+{% block active_login %} active" aria-current="page"{% endblock %}
+{% block content %}
+<div class="col-4"></div>
+<div class="col-4">
+    <form style="padding-top: 20px;">
+        <h3 class="d-flex justify-content-center">{{_('Login into account')}}</h3>
+        <div class="mb-3">
+          <label for="email" class="form-label">{{_('Email address')}}</label>
+          <input type="email" class="form-control" id="email" placeholder="{{_('E.g. john.smith@email.com')}}">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">{{_('Password')}}</label>
+          <input type="password" class="form-control" id="password">
+          <div id="email" class="form-text"><a href="#" class="link-secondary">{{_('Forgot your password?')}}</a></div>
+        </div>
+        <button type="submit" class="btn btn-primary">{{_('Login')}}</button>
+      </form>
+</div>
+{% endblock %}

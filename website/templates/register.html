@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Wineata - {{_('Registration')}}{% endblock %}
+{% block active_register %} active" aria-current="page"{% endblock %}
+{% block content %}
+<div class="col-4"></div>
+<div class="col-4">
+    <form style="padding-top: 20px;">
+        <h3 class="d-flex justify-content-center">{{_('Create new account')}}</h3>
+        <div class="mb-3">
+            <label for="firstName" class="form-label">{{_('First name')}}</label>
+            <input type="text" class="form-control" id="firstName" placeholder="{{_('E.g. John')}}">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">{{_('Last name')}}</label>
+            <input type="text" class="form-control" id="lastName" placeholder="{{_('E.g. Smith')}}">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">{{_('Email address')}}</label>
+          <input type="email" class="form-control" id="email" placeholder="{{_('E.g. john.smith@email.com')}}">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">{{_('Password')}}</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+        <div class="mb-3">
+            <label for="repeatPassword" class="form-label">{{_('Repeat Password')}}</label>
+            <input type="password" class="form-control" id="repeatPassword">
+          </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">{{_('Check me out')}}</label>
+        </div>
+        <button type="submit" class="btn btn-primary">{{_('Submit')}}</button>
+      </form>
+</div>
+{% endblock %}
