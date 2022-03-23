@@ -1,16 +1,25 @@
-from flask import Flask
-from flask_babel import Babel, gettext
+from tkinter import CURRENT
+from flask import Flask, request, session
+from flask_babelex import Babel, gettext
 
 
 def create_app():
     app = Flask(__name__)
-    app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+    #app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+    app.config['LANGUAGES'] = { 'en' : 'English', 'hr': 'Hrvatski'}
+    app.secret_key = "wineata super secret key"
     babel = Babel(app)
+    
+    @app.context_processor
+    def inject_conf_var():
+        return dict(AVAILABLE_LANGUAGES=app.config['LANGUAGES'], CURRENT_LANGUAGE=session.get('lang', request.accept_languages.best_match(app.config['LANGUAGES'].keys())))
     
     @babel.localeselector
     def get_locale():
-        return 'en'
-    
+        if request.args.get('lang'):
+            session['lang'] = request.args.get('lang')
+        return session.get('lang', request.accept_languages.best_match(app.config['LANGUAGES'].keys()))
+
     from .views import views
     from .auth import auth
     

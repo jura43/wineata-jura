@@ -1,5 +1,5 @@
 from gettext import gettext
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, session, redirect, url_for
 from flask_babel import Babel, gettext
 
 views = Blueprint('views', __name__)
@@ -16,4 +16,8 @@ def wineata():
 def wineries():
     return render_template('wineries.html')
 
+@views.route('/lang=<language>')
+def set_language(language=None):
+    session['lang'] = language
+    return redirect(request.referrer)
 
