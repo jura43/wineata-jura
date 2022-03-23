@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-03-20 01:12+0100\n"
+"POT-Creation-Date: 2022-03-23 16:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,20 +29,16 @@ msgstr ""
 msgid "Shop"
 msgstr ""
 
-#: templates/base.html:35
-msgid "Language"
-msgstr ""
-
-#: templates/base.html:42 templates/login.html:2
+#: templates/base.html:50 templates/login.html:2 templates/login.html:18
 msgid "Login"
 msgstr ""
 
-#: templates/base.html:45
+#: templates/base.html:53
 msgid "Register"
 msgstr ""
 
 #: templates/login.html:8
-msgid "Login to account"
+msgid "Login into account"
 msgstr ""
 
 #: templates/login.html:10 templates/register.html:18
@@ -57,8 +53,8 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: templates/login.html:17 templates/register.html:33
-msgid "Submit"
+#: templates/login.html:16
+msgid "Forgot your password?"
 msgstr ""
 
 #: templates/register.html:2
@@ -91,5 +87,9 @@ msgstr ""
 
 #: templates/register.html:31
 msgid "Check me out"
+msgstr ""
+
+#: templates/register.html:33
+msgid "Submit"
 msgstr ""
 
