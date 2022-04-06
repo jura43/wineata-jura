@@ -1,6 +1,4 @@
-from gettext import gettext
 from flask import Blueprint, render_template, request, session, redirect, url_for
-from flask_babel import Babel, gettext
 
 views = Blueprint('views', __name__)
 

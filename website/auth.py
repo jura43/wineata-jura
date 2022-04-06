@@ -1,5 +1,4 @@
 from flask import Blueprint, redirect, render_template, request, url_for
-from flask_babel import gettext
 
 auth = Blueprint('auth', __name__)
 

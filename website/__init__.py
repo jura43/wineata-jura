@@ -1,6 +1,5 @@
-from tkinter import CURRENT
 from flask import Flask, request, session
-from flask_babelex import Babel, gettext
+from flask_babelex import Babel
 
 
 def create_app():

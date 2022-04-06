@@ -40,7 +40,6 @@ msgid "Register"
 msgstr "Registriraj se"
 
 #: templates/login.html:8
-#, fuzzy
 msgid "Login into account"
 msgstr "Prijavi se u račun"
 
@@ -61,7 +60,6 @@ msgid "Forgot your password?"
 msgstr "Zaboravili ste lozinku?"
 
 #: templates/register.html:2
-#, fuzzy
 msgid "Registration"
 msgstr "Registracija"
 
